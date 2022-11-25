@@ -14,7 +14,7 @@ pipeline {
       }
         stage('Build Code') {
             steps {
-                sh "./Prog1.py"
+                sh "./subtraction.py"
             }
         }
      stage('Test Code') {
