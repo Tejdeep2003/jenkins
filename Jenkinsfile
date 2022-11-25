@@ -22,30 +22,6 @@ pipeline {
                 sh "./test.py"
             }
         }
-        stage('Test Code1') {
-            steps {                
-                sh "./test1.py"
-            }
-        }
-        stage('Test Code2') {
-            steps {                
-                sh "./test2.py"
-            }
-        }
-        stage('Test Code3') {
-            steps {
-                sh "./test3.py"
-            }
-        }
-        stage('Test Code4') {
-            steps {
-                sh "./test4.py"
-            }
-        }
-        stage('Test Code5') {
-            steps {
-                sh "./test5.py"
-            }
-        }
+        
     } 
 }
