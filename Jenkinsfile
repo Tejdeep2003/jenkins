@@ -1,0 +1,30 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/Tejdeep2003/jenkins.git'
+            }
+        }
+      stage('Provide permissions'){
+        steps{
+             sh "chmod u+x substraction.py"
+             sh "chmod u+x test1.py test2.py test3.py test4.py test5.py"
+        }
+      }
+        stage('Build Code') {
+            steps {
+                sh "./Prog1.py"
+            }
+        }
+     stage('Test Code') {
+            steps {
+                sh "./test1.py"
+                sh "./test2.py"
+                sh "./test3.py"
+                sh "./test4.py"
+                sh "./test5.py"
+            }
+        }
+    } 
+}
