@@ -8,7 +8,7 @@ pipeline {
         }
       stage('Provide permissions'){
         steps{
-             sh "chmod u+x substraction.py"
+             sh "chmod u+x subtraction.py"
              sh "chmod u+x test1.py test2.py test3.py test4.py test5.py"
         }
       }
