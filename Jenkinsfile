@@ -3,19 +3,19 @@ agent any
     stages{
         stage('clone'){
             steps{
-                echo "Not cloning"
+                git 'https://github.com/Tejdeep2003/jenkins.git'
             }
         }
         stage('Build'){
             steps{
-                chmod u+x Prog1.py
-                python3 Prog1.py
+                sh "chmod u+x Prog1.py"
+                sh "./Prog1.py"
             }
         }
         stage('Test'){
             steps{
-                chmod u+x Test.py
-                python3 Test.py
+                sh "chmod u+x Test.py"
+                sh "./Test.py"
             }
         }
     }
